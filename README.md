@@ -10,11 +10,11 @@ Requirements:
 3. requests - https://pypi.org/project/requests/
 
 How to use:
-I, Obtain a cyberdrop.me link that you wish to download the files from.
-II, Launch the script from terminal using py ./CDListGen.py while working in the directory.
-III, Paste the link into the terminal when 'URL:' pops up and press enter.
-IV, View the links.txt file created in the scripts directory, you will have your links.
-V, Use a tool like JDownloader 2 (https://jdownloader.org/) to add the list of links to linkGrabber.
-VI, Click Start all Downloads in JDownloader 2 and your download will begin.
+1. Obtain a cyberdrop.me link that you wish to download the files from.
+2. Launch the script from terminal using py ./CDListGen.py while working in the directory.
+3. Paste the link into the terminal when 'URL:' pops up and press enter.
+4. View the links.txt file created in the scripts directory, you will have your links.
+5. Use a tool like JDownloader 2 (https://jdownloader.org/) to add the list of links to linkGrabber.
+6. Click Start all Downloads in JDownloader 2 and your download will begin.
 
 Enjoy.
