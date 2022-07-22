@@ -9,22 +9,22 @@ soup = BeautifulSoup(getURL.text, 'html.parser')
 linklist = []
 
 for link in soup.find_all('a'):
-    linklist.append(link.get('href'))
+    linklist.append(link.get('href')) # Adds all hyperlinks to a list
 
-del linklist[:5]
+del linklist[:5] # Removes first 6 unwanted items in list
 
-linklistnum = len(linklist)
+linklistnum = len(linklist) # Generates number of how many items are in list
 
-del linklist[(linklistnum - 5):]
+del linklist[(linklistnum - 5):] # Removes last 6 unwanted items in list
 
 new_list = [x[26:] for x in linklist]
 
-newlistnum = len(new_list)
-newlistdelnumber = 0
+newlistnum = len(new_list) # Generates number for items in list
+newlistdelnumber = 0 # Sets newlistdelnumber to 0
 
-listremovedlinks = []
+listremovedlinks = [] # Creates a new list
 
-new_list.pop(0)
+new_list.pop(0) # Removes first item from list
 
 for x in range(newlistnum):
     while (newlistnum) > (newlistdelnumber):
@@ -35,15 +35,18 @@ for x in range(newlistnum):
         except:
             pass
 
-newestlist = []
-newlistaddnumber = len(listremovedlinks)
+mp4links = []
+listwithoutmp4 = []
 
-for x in range(len(listremovedlinks)):
-    while (newlistaddnumber) > 0:
-        newestlist.append('https://cyberdrop.me' + (listremovedlinks[newlistaddnumber - 1]))
-        newlistaddnumber = (newlistaddnumber - 1)
-    
+for x in listremovedlinks: # Seperates .mp4 from link list
+    if '.mp4' in x:
+        mp4links.append('https://fs-05.cyberdrop.to' + (x))
+    else:
+        listwithoutmp4.append('https://cyberdrop.me' + (x))
+
 with open(r'links.txt', 'w', encoding="utf-8") as fp:
-    for item in newestlist:
+    for item in listwithoutmp4:
+        fp.write("%s\n" % item)
+    for item in mp4links:
         fp.write("%s\n" % item)
     print('Done')
