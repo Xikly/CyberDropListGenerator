@@ -10,12 +10,7 @@ this tiny python script generates a .txt file containing cyberdrop links that re
 
 ## ***Requirements:***
 
-1. Python(Latest) - https://www.python.org/downloads/
-
-2. beautifulsoup4 - https://pypi.org/project/beautifulsoup4/
-
-3. requests - https://pypi.org/project/requests/
-
+To install the requirements of this script, install the requirements.txt file and do `pip install -r requirements.txt` in your terminal to install them onto your system
   
 
 ## **How to use:**
